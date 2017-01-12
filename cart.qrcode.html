@@ -1,0 +1,40 @@
+{wc:templates "index","header"}
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/Comm.css"/>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_STYLE}/css/MyCart.css"/>
+<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/JQuery.js"></script>
+<script type="text/javascript" src="{G_TEMPLATES_STYLE}/js/jquery.cookie.js"></script>
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/footer_header.css">
+<link rel="stylesheet" type="text/css" href="{G_TEMPLATES_CSS}/index11.css">
+<style type="text/css">
+.wait_list_tips ul {max-width: 200px;margin: 0 auto;}
+.wait_list_tips ul li{text-align: center;}
+.wait_list_tips ul li a{padding: 8px 15px;border-radius: 5px;}
+.pay_done{background-color: #F08200;margin-right: 10px;border: 1px solid #F08200}
+.pay_fail{background-color: #C3C3C3;border: 1px solid #C3C3C3}
+.sub-box{height: auto}
+</style>
+<input name="hidLogined" type="hidden" id="hidLogined" value="0">
+<div class="shop_payment">
+        <ul class="payment">
+            <li class="first_step">&nbsp;</li>
+            <li class="arrow_2"></li>
+            <li class="secend_step">&nbsp;</li>
+            <li class="arrow_2"></li>
+            <li class="third_step">&nbsp;</li>
+            <li class="arrow_2"></li>
+            <li class="fourth_step">&nbsp;</li>
+        </ul>
+		<div id="divResult" class="wait_list hidden" style="display: block;">
+			<div class="wait_list_tips ">
+				<ul>
+					<li><h3 class="orange Fb">请扫描下方的二维码付款</h3></li>
+					<li><img width="150" height="150" src="{wc:$qrpic}" border="0" alt=""></li>
+            		<li class="fourth_step">&nbsp;</li>
+					<li class="sub-box"><a href="{WEB_PATH}/member/cart/checkbcrecord/{wc:$recordinfo}" class="pay_done">支付完成</a><a href="{WEB_PATH}/member/cart/cartlist" class="pay_fail">支付失败</a></li>
+            		<li class="fourth_step">&nbsp;</li>
+				</ul>
+			</div>
+		</div>
+</div>
+<!--footer 开始-->
+{wc:templates "index","footer"}
