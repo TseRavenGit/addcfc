@@ -464,7 +464,7 @@ class cart extends base {
 		$cookies = base64_encode($this->Cartlist);
 
 		/*  new add 2016-12-19 */
-		$currencyList = blockPay::getCurrencyList();
+		//$currencyList = blockPay::getCurrencyList();
 		/*  new end  */
 
 		session_start();
@@ -482,7 +482,7 @@ class cart extends base {
 		}	
 		
 
-		/*session_start();		
+		session_start();		
 		if(isset($_POST['submitcode'])) {
 			if(isset($_SESSION['submitcode'])){
 				$submitcode = $_SESSION['submitcode'];
@@ -496,7 +496,7 @@ class cart extends base {
 			}	
 		}else{
 			_message("正在返回购物车...",WEB_PATH.'/member/cart/cartlist');
-		}*/
+		}
 	
 	
 		parent::__construct();	
@@ -587,6 +587,7 @@ class cart extends base {
 	 * 2016-12-19
 	 */
 	public function getqrcode(){
+		_message("正在测试中····");
 		parent::__construct();
 
 		/*if(!$member=$this->userinfo){
@@ -641,8 +642,6 @@ class cart extends base {
 		if(!$rake){
 			_message("参数错误！");
 		}
-		var_dump(1/$rake);
-		die;
 		$uid = intval(_encrypt(_getcookie("uid"), 'DECODE'));
 		//var_dump($_POST);
 		//new test 
